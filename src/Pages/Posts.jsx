@@ -67,10 +67,10 @@ const Posts = () => {
         ) : (
           posts && (
             <div>
-              <ul>
+              <ul className="p-0">
                 {posts.map((post) => {
                   return (
-                    <div className="card" key={post._id}>
+                    <div className="card " key={post._id}>
                       <div className="card-body">
                         <li className="list-group-item d-flex align-items-center px-5 gap-5">
                           <div className="d-flex flex-column align-items-center">

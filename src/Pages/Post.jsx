@@ -125,7 +125,7 @@ const Post = () => {
                 </Button>
                 <Button variant="primary">
                   Disscuss
-                  <FaThumbsUp /> {post.comments.length}
+                  {" " + post.comments.length}
                 </Button>
               </div>
             </div>
