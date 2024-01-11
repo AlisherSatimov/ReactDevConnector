@@ -5,6 +5,7 @@ function useFetch(url) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [isFetched, setIsFetched] = useState(false);
 
   useEffect(() => {
     let unmounted = false;
@@ -12,6 +13,7 @@ function useFetch(url) {
     (async function () {
       try {
         setIsLoading(true);
+        setIsFetched(true);
         let { data } = await axios.get(url);
         if (unmounted) return;
         setData(data);
@@ -27,7 +29,7 @@ function useFetch(url) {
     };
   }, [url]);
 
-  return { data, isLoading, error };
+  return { data, isLoading, error, isFetched, setData };
 }
 
 export default useFetch;

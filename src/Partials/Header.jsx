@@ -25,7 +25,7 @@ const Header = () => {
         </Link>
         <ul className="list-unstyled d-flex m-0 gap-3">
           <li>
-            <Link to="/developer">Developers</Link>
+            <Link to="/profiles">Developers</Link>
           </li>
           {!user ? (
             <>
